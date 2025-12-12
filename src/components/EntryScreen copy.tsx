@@ -41,6 +41,6 @@ export default function EntryScreen({ onComplete }: EntryScreenProps) {
                     </motion.div>
                 </motion.div>
             )}
-        </AnimatePresence>
+        </AnimatePresence> 
     );
 }
