@@ -47,14 +47,14 @@ export default function EntryScreen({ onComplete }: EntryScreenProps) {
                 //     </motion.div>
                 // </motion.div>
                 <motion.div
-                    className="fixed !w-100 inset-0 z-50 flex  flex-col items-center justify-center bg-void text-paper"
+                    className="fixed w-full inset-0 z-50 flex flex-col items-center justify-center bg-void text-paper"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
                 >
                     {/* Top Slash */}
-                    <svg height="100" stroke="#ffffff" strokeWidth="1" className="text-line" width="100%">
+                    <svg stroke="#ffffff" strokeWidth="1" className="text-line h-16 md:h-24 lg:h-32 w-full" width="100%">
                         <text
                             x="50%"
                             y="50%"
@@ -66,7 +66,7 @@ export default function EntryScreen({ onComplete }: EntryScreenProps) {
                     </svg>
 
                     {/* Name SVG */}
-                    <svg height="100" stroke="#ffffff" strokeWidth="2" className="text-line" width="100%">
+                    <svg stroke="#ffffff" strokeWidth="2" className="text-line h-24 md:h-32 lg:h-40 w-full" width="100%">
                         <text
                             x="50%"
                             y="50%"
@@ -78,7 +78,7 @@ export default function EntryScreen({ onComplete }: EntryScreenProps) {
                     </svg>
 
                     {/* Bottom Slash */}
-                    <svg height="100" stroke="#ffffff" strokeWidth="1" className="text-line" width="100%">
+                    <svg stroke="#ffffff" strokeWidth="1" className="text-line h-16 md:h-24 lg:h-32 w-full" width="100%">
                         <text
                             x="50%"
                             y="50%"

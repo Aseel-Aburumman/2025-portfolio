@@ -2,7 +2,8 @@
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: dash 3.2s linear forwards, filling 2.3s ease-in forwards;
-    font-size: 80px;
+    /* font-size: 80px; */
+    font-size: clamp(28px, 8vw, 80px);
 }
 
 .text-line text {
