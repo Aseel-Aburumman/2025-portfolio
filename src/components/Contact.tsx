@@ -12,21 +12,23 @@ export default function Contact() {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="text-[10vw] font-bold leading-none tracking-tighter mb-12">
-                        LET'S <br /> <span className="text-graphite">CONSTRUCT</span>
+                        LET'S <br /> <span className="text-graphite">BUILD.</span>
                     </h2>
 
                     <div className="flex flex-col md:flex-row gap-12 md:gap-24">
                         <div className="space-y-8">
                             <p className="text-xl md:text-2xl text-graphite max-w-md">
-                                Ready to turn your blueprints into digital reality?
+                                Ready to turn your blueprints into reality?
                                 I'm currently available for freelance projects and open to full-time opportunities.
                             </p>
 
                             <a
-                                href="mailto:hello@aseel.dev"
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=aseelaburumman49@gmail.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-flex items-center gap-4 text-2xl md:text-3xl font-bold hover:text-blueprint transition-colors group"
                             >
-                                <span>hello@aseel.dev</span>
+                                <span>aseelaburumman49@gmail.com</span>
                                 <ArrowRight className="w-6 h-6 transform group-hover:translate-x-2 transition-transform" />
                             </a>
                         </div>
@@ -34,13 +36,15 @@ export default function Contact() {
                         <div className="flex flex-col gap-6">
                             <h3 className="text-sm font-bold tracking-widest uppercase text-graphite">Socials</h3>
                             <div className="flex gap-6">
-                                <a href="#" className="p-4 border border-white/10 rounded-full hover:bg-paper hover:text-void transition-all duration-300">
+                                <a href="https://github.com/Aseel-Aburumman" className="p-4 border border-white/10 rounded-full hover:bg-paper hover:text-void transition-all duration-300">
                                     <Github className="w-6 h-6" />
                                 </a>
-                                <a href="#" className="p-4 border border-white/10 rounded-full hover:bg-paper hover:text-void transition-all duration-300">
+                                <a href="https://www.linkedin.com/in/aseel-aburumman/" className="p-4 border border-white/10 rounded-full hover:bg-paper hover:text-void transition-all duration-300">
                                     <Linkedin className="w-6 h-6" />
                                 </a>
-                                <a href="#" className="p-4 border border-white/10 rounded-full hover:bg-paper hover:text-void transition-all duration-300">
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aseelaburumman49@gmail.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer" className="p-4 border border-white/10 rounded-full hover:bg-paper hover:text-void transition-all duration-300">
                                     <Mail className="w-6 h-6" />
                                 </a>
                             </div>

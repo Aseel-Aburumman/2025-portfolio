@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Code, Layers, PenTool, Database } from 'lucide-react';
 
 const skills = [
-    "React", "TypeScript", "Node.js", "TailwindCSS", "PostgreSQL", "Next.js", "Three.js", "Framer Motion", "System Design"
+    "React", "TypeScript", "Query", "TailwindCSS", "PostgreSQL", "Laravel", "PHP", "MySQL", "System Design", "Bootstarp", "HTML", "CSS", "JavaScript", "Git", "Firebase"
 ];
 
 export default function Profile() {
@@ -21,16 +21,17 @@ export default function Profile() {
                         Profile
                     </h2>
                     <h3 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-                        From Blueprint <br /> to Browser.
+                        From Architect <br /> to Software Engineer.
                     </h3>
                     <div className="space-y-6 text-graphite text-lg leading-relaxed">
                         <p>
-                            I started my journey in architecture, designing physical spaces that shape human interaction.
-                            Today, I apply those same principles of structure, flow, and aesthetics to the digital realm.
+                            I’m a Software Engineer with a background in architecture and a strong drive for building clean, functional, and impactful software products.
+                            My path into software wasn’t linear—I shifted from designing spaces to designing systems, and that transition sharpened my ability to think structurally,
+                            solve problems from first principles, and deliver results under pressure.
                         </p>
                         <p>
-                            As a Full-Stack Developer, I don't just write code; I construct systems.
-                            My background allows me to bridge the gap between complex backend logic and immersive frontend experiences.
+                            I work comfortably across the stack, with hands-on experience in JavaScript (ES6+),
+                            React, Redux, React Query, PHP, and Laravel, and I have a growing focus on system design, scalability, and performance optimization.
                         </p>
                     </div>
 
@@ -62,10 +63,8 @@ export default function Profile() {
 
                         <pre className="overflow-x-auto">
                             <code>
-                                <span className="text-blueprint">class</span> <span className="text-paper">Architect</span> <span className="text-blueprint">extends</span> <span className="text-paper">Developer</span> {'{'}
+                                <span className="text-blueprint">class</span> <span className="text-paper">Developer</span> <span className="text-blueprint">extends</span> <span className="text-paper">Architect</span> {'{'}
                                 {'\n'}  <span className="text-blueprint">constructor</span>() {'{'}
-                                {'\n'}    <span className="text-blueprint">super</span>();
-                                {'\n'}    <span className="text-blueprint">this</span>.passion = <span className="text-green-400">"Building"</span>;
                                 {'\n'}    <span className="text-blueprint">this</span>.stack = [
                                 {skills.map((skill, i) => (
                                     <span key={i}>{'\n'}      <span className="text-yellow-300">"{skill}"</span>,</span>

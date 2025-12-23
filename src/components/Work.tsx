@@ -1,22 +1,36 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { projects } from '../data/projects';
 import type { Project } from '../data/projects';
-import ProjectDetail from './ProjectDetail';
+import ProjectDialog from './ProjectDialog';
+import type { RootState } from '../store/store';
+import { setOpenDialog } from '../store/uiSlice';
 
 export default function Work() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const dispatch = useDispatch();
+    const openDialog = useSelector((state: RootState) => state.ui.openDialog);
+
+    const handleProjectClick = (project: Project) => {
+        setSelectedProject(project);
+        dispatch(setOpenDialog(true));
+    };
+
+    const handleCloseDialog = () => {
+        dispatch(setOpenDialog(false));
+    };
 
     return (
         <section id="work" className="min-h-screen py-24 px-6 md:px-12 bg-void text-paper relative">
             <div className="max-w-7xl mx-auto">
                 <div className="flex items-end justify-between mb-16">
                     <h2 className="text-[10vw] md:text-[6vw] font-bold leading-none tracking-tighter">
-                        SELECTED <br /> <span className="text-graphite">WORK</span>
+                        WORK
                     </h2>
                     <span className="hidden md:block text-sm tracking-widest uppercase text-graphite mb-2">
-                        (2022 — 2024)
+                        (2024 — 2025)
                     </span>
                 </div>
 
@@ -29,7 +43,7 @@ export default function Work() {
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.8, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
                             className={`group cursor-pointer ${index % 2 === 1 ? 'md:mt-24' : ''}`}
-                            onClick={() => setSelectedProject(project)}
+                            onClick={() => handleProjectClick(project)}
                             layoutId={`project-${project.id}`}
                         >
                             <div className="relative overflow-hidden aspect-[4/3] mb-6 border border-white/5 group-hover:border-blueprint/50 transition-colors duration-500 rounded-sm">
@@ -73,14 +87,13 @@ export default function Work() {
                 </div>
             </div>
 
-            <AnimatePresence>
-                {selectedProject && (
-                    <ProjectDetail
-                        project={selectedProject}
-                        onClose={() => setSelectedProject(null)}
-                    />
-                )}
-            </AnimatePresence>
+            {selectedProject && (
+                <ProjectDialog
+                    visible={openDialog}
+                    onHide={handleCloseDialog}
+                    project={selectedProject}
+                />
+            )}
         </section>
     );
 }
